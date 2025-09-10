@@ -99,9 +99,17 @@ const StudyTour = () => {
                 onClick={() => setSelectedTour(tour)}
               >
                 <img src={tour.img} alt={tour.title} />
+                </div>
                 <h4 className="text-center mt-2">{tour.title}</h4>
-                <div className="click-me-badge">Click Me</div>
-              </div>
+                 <div className="text-center mt-2">
+    <button
+      className="click-me-btn"
+      onClick={() => setSelectedTour(tour)}
+    >
+      Click Me
+    </button>
+  </div>
+              
             </SwiperSlide>
           ))}
         </Swiper>
@@ -187,33 +195,30 @@ const StudyTour = () => {
         .cursor-pointer {
           cursor: pointer;
         }
-          .poster-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.click-me-badge {
-  position: absolute;
-  bottom: 1px;  /* a little above the very bottom */
-  left: 50%;
-  transform: translateX(-50%);
+        .click-me-btn {
   background: #ff4757;
   color: white;
   font-size: 0.9rem;
   font-weight: bold;
-  padding: 6px 14px;
+  padding: 8px 18px;
+  border: none;
   border-radius: 20px;
-  animation: pulse 1.5s infinite;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  z-index: 10;
   cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  animation: pulse 1.5s infinite;
+}
+
+.click-me-btn:hover {
+  background: #e84118;
+  transform: scale(1.05);
 }
 
 @keyframes pulse {
-  0% { transform: translateX(-50%) scale(1); opacity: 1; }
-  50% { transform: translateX(-50%) scale(1.1); opacity: 0.85; }
-  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
 }
+
 
       `}</style>
     </Layout>
