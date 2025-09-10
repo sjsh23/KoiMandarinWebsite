@@ -21,7 +21,7 @@ const OnlineCourse = () => {
 
       <Navbar />
 
-      <PageBanner pageTitle={<Trans>OurServices Mandarin CTA</Trans>} />
+      <PageBanner pageTitle={<Trans>OurServices Online CTA</Trans>} />
 
       <OnlineCourseSection />
 

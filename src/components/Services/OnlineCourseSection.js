@@ -1,7 +1,16 @@
 import React from "react"
 import { Trans } from "gatsby-plugin-react-i18next"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination, Navigation, Autoplay } from "swiper"
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
 
-import MandarinCourseImg from "../../assets/images/mandarin-course-img.jpg"
+import MandarinCourseVideo from "../../assets/videos/online-course-video-ratio.mp4"
+import poster1 from "../../assets/images/online-class/online-class-poster1.webp"
+import poster2 from "../../assets/images/online-class/online-class-poster2.webp"
+
+const posters = [poster1, poster2]
 
 const AboutSection = () => {
   return (
@@ -9,6 +18,8 @@ const AboutSection = () => {
       <div className="about-area pb-100 overflow-hidden">
         <div className="container">
           <div className="row align-items-center">
+            
+            {/* LEFT SIDE - VIDEO */}
             <div className="col-lg-6 col-md-12">
               <div 
                 className="about-img"
@@ -16,10 +27,18 @@ const AboutSection = () => {
                 data-aos-duration="1200"
                 data-aos-delay="300"
               >
-                <img src={MandarinCourseImg} alt="About" />
+                <video
+                  src={MandarinCourseVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  style={{ width: "100%", borderRadius: "10px" }}
+                />  
               </div>
             </div>
 
+            {/* RIGHT SIDE - CONTENT */}
             <div className="col-lg-6 col-md-12">
               <div 
                 className="about-content"
@@ -49,73 +68,68 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="pricing-area bg-f9f9f9 pt-100 pb-70">
+      {/* POSTER SWIPER SECTION */}
+      <div className="poster-area bg-f9f9f9 pt-100 pb-70">
         <div className="container">
-          <div className="row justify-content-center">
-            <div 
-              className="col-lg-6 col-md-6 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="100"
-            >
-              <div className="single-pricing-box">
-                <div className="pricing-header">
-                  <div className="icon">
-                    <i className="flaticon-jigsaw"></i>
-                    <div className="circles-box">
-                      <div className="circle-one"></div>
-                    </div>
-                  </div>
-                  <h3><Trans>Student</Trans></h3>
+          <h2 className="text-center mb-4">
+            <Trans>OurServices Online Posters</Trans>
+          </h2>
+          <Swiper
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            navigation={true}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            modules={[Pagination, Autoplay, Navigation]}
+            className="poster-swiper"
+          >
+            {posters.map((poster, i) => (
+              <SwiperSlide key={i}>
+                <div className="poster-slide">
+                  <img src={poster} alt={`poster-${i}`} className="poster-img" />
                 </div>
-
-                <div className="pricing-features">
-                  <ul>
-                    <li><Trans>OurServices Mandarin Student Feature1</Trans></li>
-                    <li><Trans>OurServices Mandarin Student Feature2</Trans></li>
-                    <li><Trans>OurServices Mandarin Student Feature3</Trans></li>
-                    <li><Trans>OurServices Mandarin Student Feature4</Trans></li>
-                    <li><Trans>OurServices Mandarin Student Feature5</Trans></li>
-                    <li><Trans>OurServices Mandarin Student Feature6</Trans></li>
-                    <li><Trans>OurServices Mandarin Student Feature7</Trans></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div 
-              className="col-lg-6 col-md-6 col-sm-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="200"
-            >
-              <div className="single-pricing-box">
-                <div className="pricing-header">
-                  <div className="icon">
-                    <i className="flaticon-competitor"></i>
-                    <div className="circles-box">
-                      <div className="circle-one"></div>
-                    </div>
-                  </div>
-                  <h3><Trans>Adult</Trans></h3>
-                </div>
-
-                <div className="pricing-features">
-                  <ul>
-                    <li><Trans>OurServices Mandarin Adult Feature1</Trans></li>
-                    <li><Trans>OurServices Mandarin Adult Feature2</Trans></li>
-                    <li><Trans>OurServices Mandarin Adult Feature3</Trans></li>
-                    <li><Trans>OurServices Mandarin Adult Feature4</Trans></li>
-                    <li><Trans>OurServices Mandarin Adult Feature5</Trans></li>
-                    <li><Trans>OurServices Mandarin Adult Feature6</Trans></li>
-                    <li><Trans>OurServices Mandarin Adult Feature7</Trans></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
+
+      {/* Minimal CSS */}
+      <style jsx>{`
+  .poster-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .poster-img {
+    width: 100%;
+    max-width: 500px; /* prevents poster from being too big on large screens */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+
+  .poster-swiper {
+    padding-bottom: 40px;
+  }
+
+  .poster-swiper .swiper-pagination {
+    bottom: 0px !important;
+  }
+
+  .poster-swiper .swiper-button-prev,
+  .poster-swiper .swiper-button-next {
+    color: #000;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .poster-img {
+      max-width: 100%; /* take full width on smaller screens */
+    }
+  }
+`}</style>
+
     </>
   )
 }
