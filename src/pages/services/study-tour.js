@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
 import Layout from "../../components/App/Layout"
@@ -6,6 +6,7 @@ import SEO from "../../components/App/SEO"
 import Navbar from "../../components/App/Navbar"
 import Footer from "../../components/App/Footer"
 import BackgroundSection from "../../components/Common/BackgroundSection"
+import {useLocation} from "@reach/router"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Autoplay, Navigation } from "swiper"
@@ -56,10 +57,18 @@ const studyTours = [
 ]
 
 const StudyTour = () => {
+  const location = useLocation()
   const { t } = useTranslation()
   const [selectedTour, setSelectedTour] = useState(null)
 
   const title = `${t("Services")} - ${t("OurServices StudyTour CTA")}`
+
+  useEffect(() => {
+    if (location.state?.selectedTourId) {
+      const tour = studyTours.find(t => t.id === location.state.selectedTourId)
+      if (tour) setSelectedTour(tour)
+    }
+  }, [location.state])
 
   return (
     <Layout>

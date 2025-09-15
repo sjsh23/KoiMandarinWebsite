@@ -14,6 +14,7 @@ import OurTeachers from "../components/Common/OurTeachers"
 import StudentAwards from "../components/Common/StudentAwards"
 import Footer from "../components/App/Footer"
 import ExamPapers from "../components/Common/ExamPapers"
+import Popup from "../components/Common/StudyTourPopup"
 
 const HomeOne = () => {
   const { t } = useTranslation()
@@ -21,6 +22,8 @@ const HomeOne = () => {
   return (
     <Layout>
       <SEO title={t('Home')} />
+
+      <Popup/>
 
       <Navbar />
 
