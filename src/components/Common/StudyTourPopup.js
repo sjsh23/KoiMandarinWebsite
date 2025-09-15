@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { navigate } from "gatsby"
-import poster1 from "../../assets/images/study-tour/studytour_poster1.png"
+import poster1 from "../../assets/images/study-tour/koiWinterPoster2025.png"
 
 const StudyTourPopup = () => {
   const [visible, setVisible] = useState(false)
@@ -18,7 +18,7 @@ const StudyTourPopup = () => {
   const handleClick = () => {
     // Redirect to StudyTour page and pass state
     navigate("/services/study-tour", {
-      state: { selectedTourId: 1 }, // <-- match tour.id in your StudyTour page
+      state: { selectedTourId: 2 }, // <-- match tour.id in your StudyTour page
     })
   }
 
