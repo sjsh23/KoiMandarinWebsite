@@ -7,8 +7,8 @@ import "swiper/css/pagination"
 import "swiper/css/navigation"
 
 import MandarinCourseVideo from "../../assets/videos/online-course-video-ratio.mp4"
-import poster1 from "../../assets/images/online-class/online-class-poster1.webp"
-import poster2 from "../../assets/images/online-class/online-class-poster2.webp"
+import poster2 from "../../assets/images/online-class/online-class-poster1.webp"
+import poster1 from "../../assets/images/online-class/online-class-poster2.webp"
 
 const posters = [poster1, poster2]
 

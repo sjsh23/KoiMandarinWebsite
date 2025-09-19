@@ -32,6 +32,7 @@ import tianjin14 from "../../assets/images/study-tour/tianjintour14.jpg"
 import tianjin15 from "../../assets/images/study-tour/tianjintour15.jpg"
 import poster1 from "../../assets/images/study-tour/studytour_poster1.png"
 import poster2 from "../../assets/images/study-tour/koiWinterPoster2025.png"
+import itinerary from "../../assets/images/study-tour/tianjin-itinerary.png"
 
 const studyTours = [
   {
@@ -50,7 +51,7 @@ const studyTours = [
     title: "Tianjin 2025",
     img: poster2,
     description: "Amazing study tour in Tianjin 2025 with cultural and educational experiences.",
-    gallery: [tianjin1]
+    gallery: [itinerary]
   }
 ]
 
@@ -137,10 +138,10 @@ const StudyTour = () => {
           ✕
         </button>
 
-        <div className="poster-description">
+        {/* <div className="poster-description">
           <h2>{selectedTour.title}</h2>
           <p>{selectedTour.description}</p>
-        </div>
+        </div> */}
 
         <Swiper
           slidesPerView={1}
