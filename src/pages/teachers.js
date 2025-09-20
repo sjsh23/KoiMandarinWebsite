@@ -15,6 +15,7 @@ import TeacherImg2 from "../assets/images/teacher/teacher-img2.jpg"
 import TeacherImg3 from "../assets/images/teacher/teacher-img3.jpg"
 import TeacherImg4 from "../assets/images/teacher/teacher-img.jpg"
 import TeacherImg5 from "../assets/images/teacher/teacher-img5.jpg"
+import TeacherImg6 from "../assets/images/teacher/teacher-img6.jpg"
 
 const Teachers = () => {
   const { t } = useTranslation()
@@ -319,6 +320,37 @@ const Teachers = () => {
       
                       <div className="content">
                         <h3><Trans>Viriyani Djohan</Trans></h3>
+                      </div>
+      
+                      <ul className="social-link">
+                        <li>
+                          <Link
+                            to=""
+                            onClick={e => e.preventDefault()}
+                            className="d-block"
+                          >
+                            <i className="bx bx-show"></i>
+                          </Link>
+                        </li>
+                        <li>
+                          <a
+                            href=""
+                            className="d-block"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <i className="bx bxl-instagram"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                   <div className="single-team-box">
+                      <img src={TeacherImg6} alt="team-image" />
+      
+                      <div className="content">
+                        <h3><Trans>Guo Fang Cen</Trans></h3>
                       </div>
       
                       <ul className="social-link">

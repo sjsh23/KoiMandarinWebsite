@@ -145,7 +145,7 @@ export default function CourseInterestForm() {
         </select>
       </div>
 
-      <div className="mb-3" data-aos="fade-up" data-aos-delay="500">
+      <div className="mb-3" >
         <label className="form-label">{t("Message")}</label>
         <textarea
           name="message"

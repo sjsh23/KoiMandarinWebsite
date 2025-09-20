@@ -142,6 +142,16 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                           <Link
+                            to="/services/online-course"
+                            activeClassName="active"
+                            onClick={toggleNavbar}
+                            className="nav-link"
+                          >
+                            <Trans>Online Class</Trans>
+                          </Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link
                             to="/services/study-abroad"
                             activeClassName="active"
                             onClick={toggleNavbar}
@@ -160,16 +170,7 @@ const Navbar = () => {
                             <Trans>Study Tour</Trans>
                           </Link>
                         </li>
-                        <li className="nav-item">
-                          <Link
-                            to="/services/online-course"
-                            activeClassName="active"
-                            onClick={toggleNavbar}
-                            className="nav-link"
-                          >
-                            <Trans>Online Class</Trans>
-                          </Link>
-                        </li>
+                        
                       </ul>
                     </li>
 

@@ -212,7 +212,7 @@ const OurTeachers = () => {
                 <img src={TeacherImg6} alt="team-image" />
 
                 <div className="content">
-                  <h3><Trans>Viriyani Djohan</Trans></h3>
+                  <h3><Trans>Guo Fang Cen</Trans></h3>
                 </div>
 
                 <ul className="social-link">
