@@ -1,7 +1,12 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+// gatsby-ssr.js
+import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
-// You can delete this file if you're not using it
+export const wrapRootElement = ({ element }) => {
+  return (
+    <>
+      {element}
+      <Analytics />
+    </>
+  );
+};
