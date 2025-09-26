@@ -291,7 +291,7 @@ const MainBanner = () => {
         channel="youtube"
         autoplay
         isOpen={isOpen}
-        videoId="bk7McNUjWgw"
+        videoId="IzYNg9mnrOM"
         onClose={() => setOpen(false)}
       />
     </>
