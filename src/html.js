@@ -3,7 +3,14 @@ import React from "react"
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
-      <head>{props.headComponents}</head>
+      <head>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+        />
+        {props.headComponents}
+      </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
 
