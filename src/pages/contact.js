@@ -45,7 +45,10 @@ const Contact = () => {
                 </div>
                 <h3><Trans>Contact</Trans></h3>
                 <p>
-                  <Trans>Mobile</Trans>: <a href="tel:+6282210886629">(+62) 822 - 1088 - 6629</a>
+                  <Trans>Offline</Trans>: <a href="tel:+6282210886629">(+62) 822 - 1088 - 6629</a>
+                </p>
+                <p>
+                  <Trans>Online</Trans>: <a href="tel:+6285810562792">(+62) 858 - 1056 - 2792</a>
                 </p>
                 <p>
                   <Trans>E-mail</Trans>: <a href="mailto:admin@koi-mandarin.com">admin@koi-mandarin.com</a>

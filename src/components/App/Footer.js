@@ -88,6 +88,10 @@ const Footer = () => {
                     <a href="tel:+6282210886629">(+62) 822 - 1088 - 6629</a>
                   </li>
                   <li>
+                    <i className="bx bx-phone-call"></i>
+                    <a href="tel:+6285810562792">(+62) 858 - 1056 - 2792</a>
+                  </li>
+                  <li>
                     <i className="bx bx-envelope"></i>
                     <a href="mailto:admin@koi-mandarin.com">admin@koi-mandarin.com</a>
                   </li>
