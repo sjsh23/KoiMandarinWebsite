@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
+
 import Layout from "../components/App/Layout"
 import SEO from "../components/App/SEO"
 import Navbar from "../components/App/Navbar"

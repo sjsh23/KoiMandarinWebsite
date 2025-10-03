@@ -51,16 +51,32 @@ const AboutSection = () => {
                   <h2><Trans>OurServices Online Page Title</Trans></h2>
                   <p><Trans>OurServices Online Page Desc</Trans></p>
 
-                  <ul className="features-list">
-                    <div className="row align-items-center">
-                      <div className="col-lg-6 col-md-6">
-                        <li><i className="bx bx-group"></i> <Trans>Small Groups</Trans></li>
-                      </div>
-                      <div className="col-lg-6 col-md-6">
-                        <li><i className="bx bx-user"></i> <Trans>Private</Trans></li>
-                      </div>
-                    </div>
-                  </ul>
+                  
+
+                  {/* START: NEW CONTENT SECTION */}
+                  <div className="why-us-list mt-4">
+                    <ul>
+                      <li>
+                        <i className="bx bxs-user-voice"></i>
+                        <h4><Trans>ExpertTutorsTitle</Trans></h4>
+                        <p><Trans>ExpertTutorsDesc</Trans></p>
+                      </li>
+                      <li>
+                        <i className="bx bxs-badge-check"></i>
+                        <h4><Trans>VerifiedCredentialsTitle</Trans></h4>
+                        <p><Trans>VerifiedCredentialsDesc</Trans></p>
+                      </li>
+                      <li>
+                        <i className="bx bxs-edit"></i>
+                        <h4><Trans>CustomizedCoursesTitle</Trans></h4>
+                        <p><Trans>CustomizedCoursesDesc</Trans></p>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <p className="mt-3"><strong><Trans>WhyKoiOutro</Trans></strong></p>
+                  {/* END: NEW CONTENT SECTION */}
+
                 </div>
               </div>
             </div>
@@ -95,41 +111,69 @@ const AboutSection = () => {
 
       {/* Minimal CSS */}
       <style jsx>{`
-  .poster-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+        .poster-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
-  .poster-img {
-    width: 100%;
-    max-width: 500px; /* prevents poster from being too big on large screens */
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  }
+        .poster-img {
+          width: 100%;
+          max-width: 500px;
+          height: auto;
+          border-radius: 12px;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
 
-  .poster-swiper {
-    padding-bottom: 40px;
-  }
+        .poster-swiper {
+          padding-bottom: 40px;
+        }
 
-  .poster-swiper .swiper-pagination {
-    bottom: 0px !important;
-  }
+        .poster-swiper .swiper-pagination {
+          bottom: 0px !important;
+        }
 
-  .poster-swiper .swiper-button-prev,
-  .poster-swiper .swiper-button-next {
-    color: #000;
-  }
+        .poster-swiper .swiper-button-prev,
+        .poster-swiper .swiper-button-next {
+          color: #000;
+        }
+        
+        /* START: NEW STYLES */
+        .why-us-list ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 25px;
+        }
+        .why-us-list li {
+            position: relative;
+            padding-left: 45px;
+            margin-bottom: 20px;
+        }
+        .why-us-list li i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 30px;
+            color: var(--main-color); /* Uses your theme's main color variable */
+        }
+        .why-us-list li h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .why-us-list li p {
+            margin-bottom: 0;
+            font-size: 15px; /* Adjust as needed */
+            line-height: 1.6;
+        }
+        /* END: NEW STYLES */
 
-  /* Mobile responsive */
-  @media (max-width: 768px) {
-    .poster-img {
-      max-width: 100%; /* take full width on smaller screens */
-    }
-  }
-`}</style>
-
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+          .poster-img {
+            max-width: 100%;
+          }
+        }
+      `}</style>
     </>
   )
 }

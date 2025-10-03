@@ -14,3 +14,10 @@ import "swiper/css/bundle";
 import './src/assets/css/style.css'
 import './src/assets/css/responsive.css'
 import './src/assets/css/dark.css'
+
+export const onInitialClientRender = () => {
+  const loader = document.getElementById("___loader")
+  if (loader) {
+    loader.style.display = "none"
+  }
+}
